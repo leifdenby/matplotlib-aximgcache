@@ -88,6 +88,10 @@ The final figure looks like this:
 
 ![](final.png)
 
+NB: as you can tell from the above image there is a slight offset issue with
+the plotted image. If you know what that might be [please let me
+know](https://github.com/leifdenby/matplotlib-aximgcache/issues/new/choose)!
+
 
 ## Contributing and inspiration
 
