@@ -1,5 +1,7 @@
 # Easily store and replot matplotlib Axes content
 
+[![matplotlib-aximgcache (pip install)](https://github.com/leifdenby/matplotlib-aximgcache/actions/workflows/python-package-pip.yml/badge.svg)](https://github.com/leifdenby/matplotlib-aximgcache/actions/workflows/python-package-pip.yml)
+
 Have a plot that takes a long time to create and which you want to overlay
 different things onto? You can use `matplotlib-aximgcache` to save the
 intermediate axes content to an image and later replot that same content into a
