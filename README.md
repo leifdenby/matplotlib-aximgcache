@@ -47,6 +47,10 @@ for rect in rects:
 mpl_aic.save_ax_to_image(ax=ax, fpath="test.png")
 ```
 
+The figure looks like this:
+
+![](initial.png)
+
 The stored image looks this (and contains meta-info so we can replot it in the
 correct location):
 
