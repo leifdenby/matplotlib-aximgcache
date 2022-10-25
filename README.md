@@ -1,10 +1,11 @@
 # Easily store and replot matplotlib Axes content
 
-Have a plot that takes a long time to create which want to overlay different
-things onto? You can use `matplotlib-aximgcache` to save the intermediate axes
-content to an image and later replot that same content into a new axes (in the
-right place with transparency!) All you need is `.save_ax_to_image` and
-`.load_and_plot_image`, see below for an example (or [example.ipynb](example.ipynb)).
+Have a plot that takes a long time to create and which you want to overlay
+different things onto? You can use `matplotlib-aximgcache` to save the
+intermediate axes content to an image and later replot that same content into a
+new axes (in the right place with transparency!) All you need is
+`.save_ax_to_image` and `.load_and_plot_image`, see below for an example (or
+[example.ipynb](example.ipynb)).
 
 
 ## Installation
@@ -15,9 +16,10 @@ python -m pip install matplotlib-aximgcache
 
 ## Usage
 
-First, we'll create a reference image with some shapes that extend to the edges
+First, we'll create a reference plot with some shapes that extend to the edges
 of the figure and with whitespace in the middle so that we can test that
-transparency works. At the end we call `.save_ax_to_image(...)`
+transparency works. At the end we call `.save_ax_to_image(...)` to save the
+`matplotlib.Axes` content.
 
 ```python3
 import matplotlib.pyplot as plt
@@ -51,8 +53,9 @@ correct location):
 ![](test.png)
 
 
-Next, we create a new figure with an axes with different extents that the
-original axes and has some extra content so we can check alignment and transparency:
+Next, we create a new figure with an axes that has different extents than the
+original axes and has some extra content (a few green rectangles) so we can
+check alignment and transparency:
 
 ```python
 fig, ax = plt.subplots(figsize=(8, 8))
