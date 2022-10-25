@@ -1,13 +1,13 @@
-from PIL.PngImagePlugin import PngInfo
-import matplotlib.pyplot as plt
 import io
+
 from PIL import Image
+from PIL.PngImagePlugin import PngInfo
 
 
 def create_image_from_ax(ax, **kwargs):
     """
-    Create an Image object from the content of a matplotlib.Axes which can be saved to a PNG-file
-    source: https://stackoverflow.com/a/43099136/271776
+    Create an Image object from the content of a matplotlib.Axes which can be
+    saved to a PNG-file source: https://stackoverflow.com/a/43099136/271776
     """
     ax.axis("off")
     ax.figure.canvas.draw()
@@ -41,7 +41,7 @@ def save_ax_to_image(ax, fpath, **kwargs):
 
     img.save(fpath, pnginfo=png_info, **kwargs)
 
-    
+
 def load_and_plot_image(ax, fpath, zorder=1):
     """
     Load axes content from image stored in filepath `fpath` and plot

@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import matplotlib.pyplot as plt
-import matplotlib_aximgcache as mpl_aic
 import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+
+import matplotlib_aximgcache as mpl_aic
 
 
 def test_pkg():
@@ -16,12 +17,18 @@ def test_pkg():
     # of the figure and with whitespace in the middle so that we can
     # test that transparency works
     rects = [
-        mpatches.Rectangle((0, 0), 100, 200, linewidth=1, edgecolor="none", facecolor="b"),
+        mpatches.Rectangle(
+            (0, 0), 100, 200, linewidth=1, edgecolor="none", facecolor="b"
+        ),
         mpatches.Rectangle(
             (400, 0), -100, 200, linewidth=1, edgecolor="none", facecolor="b"
         ),
-        mpatches.Rectangle((50, 50), 100, 100, linewidth=1, edgecolor="g", facecolor="r"),
-        mpatches.Rectangle((250, 50), 100, 100, linewidth=1, edgecolor="g", facecolor="r"),
+        mpatches.Rectangle(
+            (50, 50), 100, 100, linewidth=1, edgecolor="g", facecolor="r"
+        ),
+        mpatches.Rectangle(
+            (250, 50), 100, 100, linewidth=1, edgecolor="g", facecolor="r"
+        ),
     ]
 
     for rect in rects:
@@ -30,7 +37,6 @@ def test_pkg():
     # save the content of the axes to a PNG-image so that it can be replotted
     # into a new axes later
     mpl_aic.save_ax_to_image(ax=ax, fpath="test.png")
-
 
     # create a new figure with an axes with different extents that the original axes
     fig, ax = plt.subplots(figsize=(8, 8))
