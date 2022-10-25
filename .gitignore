@@ -1,0 +1,6 @@
+.eggs/
+.ipynb_checkpoints/
+build/
+*.egg-info/
+tests/test.png
+*.pyc
